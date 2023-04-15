@@ -1,0 +1,103 @@
+[
+    {
+      "name": "Iron Man",
+      "category": "Avenger",
+      "weapon": "Armor",
+      "movies": [
+        "The Avengers",
+        "Avengers: Age of Ultron",
+        "Avengers: Infinity War",
+        "Avengers: Endgame"
+      ]
+    },
+    {
+      "name": "Captain America",
+      "category": "Avenger",
+      "weapon": "Shield",
+      "movies": [
+        "The Avengers",
+        "Avengers: Age of Ultron",
+        "Avengers: Infinity War",
+        "Avengers: Endgame"
+      ]
+    },
+    {
+      "name": "Hulk",
+      "category": "Avenger",
+      "weapon": "Anger",
+      "movies": [
+        "The Avengers",
+        "Avengers: Age of Ultron",
+        "Avengers: Infinity War",
+        "Avengers: Endgame"
+      ]
+    },
+    {
+      "name": "Thor",
+      "category": "Avenger",
+      "weapon": "Hammer",
+      "movies": [
+        "The Avengers",
+        "Avengers: Age of Ultron",
+        "Avengers: Infinity War",
+        "Avengers: Endgame"
+      ]
+    },
+    {
+      "name": "Black Widow",
+      "category": "Avenger",
+      "weapon": "Agility",
+      "movies": [
+        "The Avengers",
+        "Avengers: Age of Ultron",
+        "Avengers: Infinity War",
+        "Avengers: Endgame"
+      ]
+    },
+    {
+      "name": "Scarlet Witch",
+      "category": "Avenger",
+      "weapon": "Magic",
+      "movies": [
+        "Avengers: Age of Ultron",
+        "Avengers: Infinity War",
+        "Avengers: Endgame"
+      ]
+    },
+    {
+      "name": "Quicksilver",
+      "category": "Independent",
+      "weapon": "Speed",
+      "movies": ["Avengers: Age of Ultron"]
+    },
+    {
+      "name": "Ant-Man",
+      "category": "Avenger",
+      "weapon": "Size",
+      "movies": ["Avengers: Infinity War", "Avengers: Endgame"]
+    },
+    {
+      "name": "Thanos",
+      "category": "Enemy",
+      "weapon": "Double-Edged Sword",
+      "movies": ["Avengers: Infinity War", "Avengers: Endgame"]
+    },
+    {
+      "name": "Ultron",
+      "category": "Enemy",
+      "weapon": "Techonology",
+      "movies": ["Avengers: Age of Ultron"]
+    },
+    {
+      "name": "Loki",
+      "category": "Enemy",
+      "weapon": "Magic",
+      "movies": ["The Avengers"]
+    },
+    {
+      "name": "The Chitauri",
+      "category": "Enemy",
+      "weapon": "Army",
+      "movies": ["The Avengers"]
+    }
+  ]  

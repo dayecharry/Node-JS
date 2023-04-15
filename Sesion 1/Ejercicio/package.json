@@ -1,0 +1,13 @@
+{
+  "name": "ejercicio",
+  "version": "1.0.0",
+  "description": "Para el primer ejercicio de Node.js vamos a utilizar lo aprendido en la primera sesión y crearemos nuestro propio servidor con escritura y lectura de archivos.\r Si clonamos el ejercicio podremos ver un archivo **characters.json** que contiene un array de personajes de Marvel. Estos personajes tienen varios campos que indican las películas de Avengers en las que han participado, su arma, su categoría (avenger, villano, independiente...) y su nombre.\r El objetivo final de este ejercicio es completar los requerimientos que pedimos añadiendo todo el código necesario en el archivo **index.js** así como haber creado los otros archivos que sean de necesidad.\r ¡Recuerda hacer un commit por cada paso que consigas completar!",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
