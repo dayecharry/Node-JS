@@ -1,7 +1,9 @@
 const express = require('express');
+const cors = require('cors');
 
 // ejecuto express para crear un nueveo servidor
 const server = express();
+server.use(cors());
 const PORT = 3000;
 //const routeUsers = require('./routes/users-route');
 const routeAdmin = require('./routes/admin-routes');
