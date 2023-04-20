@@ -36,9 +36,12 @@ routerAdmin.get('/productFilter', (req, res) => {
   res.send(products[req.query.position]);
 });
 
-//
+//endpoint del tipo post, permite enviar información a traves de la peticion del cliente
 routerAdmin.post('/add', (request, response) => {
   console.log(request.body);
+  products.push(request.body.name);
+  // respuesta del tipo JSON
+  response.json(products);
 });
 
 module.exports = routerAdmin;

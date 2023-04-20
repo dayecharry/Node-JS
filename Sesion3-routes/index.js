@@ -1,9 +1,11 @@
 const express = require('express');
-const cors = require('cors');
+//const cors = require('cors');
 
-// ejecuto express para crear un nueveo servidor
+// ejecuto express para crear un nuevo servidor
 const server = express();
-server.use(cors());
+//server.use(cors());
+//para que me lleguen los body params en formato de tipo JSON
+server.use(express.json());
 const PORT = 3000;
 //const routeUsers = require('./routes/users-route');
 const routeAdmin = require('./routes/admin-routes');
