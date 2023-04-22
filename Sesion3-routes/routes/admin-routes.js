@@ -3,7 +3,7 @@ const express = require('express');
 const routerAdmin = express.Router();
 const products = ['Zapatillas', 'Camiseta', 'falda', 'camisa'];
 
-// Creo un endpoint por cada ruta, con un metodo correspondiente. GET, POST, PUT, DELETE
+// Creo un endpoint por cada ruta, con un método correspondiente. GET, POST, PUT, DELETE
 
 routerAdmin.get('/products', (req, res) => {
   res.status(200);

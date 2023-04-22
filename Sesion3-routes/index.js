@@ -7,7 +7,7 @@ const server = express();
 //para que me lleguen los body params en formato de tipo JSON
 server.use(express.json());
 const PORT = 3000;
-//const routeUsers = require('./routes/users-route');
+const routeUsers = require('./routes/users-route');
 const routeAdmin = require('./routes/admin-routes');
 
 // endpoint para hacer peticiones este servidor
@@ -21,7 +21,7 @@ server.use('/info', (req, res) => {
 
 // Ruta al que vamos a aplicar el middleware
 server.use('/admin', routeAdmin);
-//server.use('/users', routeUsers);
+server.use('/users', routeUsers);
 
 //diferentes tipos de comunicacion,
 //GET --> el servidor devuelve un conjunto de informacion
