@@ -7,6 +7,8 @@ const {
   usedEmail,
 } = require('../../utils/validators');
 
+const { generateSign } = require('../../utils/jwt');
+
 const login = async (req, res) => {
   try {
     const userInfo = await User.findOne({ email: req.body.email });
@@ -16,7 +18,11 @@ const login = async (req, res) => {
     if (!bcrypt.compareSync(req.body.password, userInfo.password)) {
       return res.status(400).json({ message: 'La contraseña es incorrecta' });
     }
-    return res.status(200).json({ message: 'ha iniciado sesion' });
+    // generar un token
+
+    const token = generateSign(userInfo.id, userInfo.email);
+    console.log(token);
+    return res.status(200).json({ token, userInfo });
   } catch (error) {}
 };
 
