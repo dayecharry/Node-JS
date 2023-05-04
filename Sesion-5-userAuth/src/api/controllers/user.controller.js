@@ -10,7 +10,6 @@ const {
 const { generateSign } = require('../../utils/jwt');
 
 const login = async (req, res) => {
-  console.log('holis');
   try {
     const userInfo = await User.findOne({ email: req.body.email });
     if (!userInfo) {

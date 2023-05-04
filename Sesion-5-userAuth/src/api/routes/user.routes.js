@@ -19,6 +19,6 @@ router.post('/checkSession', [isAuth], checkSession);
 
 router.post('/admin', [isAdmin], adminRole);
 
-router.post('/logout', [logout], logoutUser);
+router.get('/logout', [logout], logoutUser);
 
 module.exports = router;

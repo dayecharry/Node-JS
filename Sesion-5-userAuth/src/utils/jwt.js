@@ -10,8 +10,11 @@ const verifySign = (token) => {
 };
 
 const closeSesion = (token) => {
-  /* console.log(token);
-  return jwt.sign(token, process.env.JWT_KEY, { expiresIn: '1s' });*/
+  const payload = jwt.decode(token);
+  const tokenId = payload.jti;
+  payload.exp = payload.iat;
+  console.log(tokenId);
+  return payload;
 };
 
 module.exports = { generateSign, verifySign, closeSesion };

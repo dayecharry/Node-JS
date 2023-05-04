@@ -1,4 +1,4 @@
-const { verifySign } = require('../utils/jwt');
+const { verifySign, closeSesion } = require('../utils/jwt');
 const User = require('../api/models/user.model');
 
 const isAuth = async (req, res, next) => {
@@ -61,12 +61,16 @@ const isAdmin = async (req, res, next) => {
   }
 };
 const logout = (req, res) => {
-  /* try {
-    const authorization = req.headers['authorization'];
-    //console.log(authorization);
-    const close = closeSesion(authorization, process.env.JWT_KEY);
-    console.log(close);
-    next();
+  const token = req.headers.authorization.split(' ')[1];
+  //console.log(authorization);
+
+  const close = closeSesion(token);
+  console.log(close);
+  if (!close.id) {
+    return res.status(401).json(tokenVerified);
+  }
+
+  /*next();
   } catch (error) {
     return res.status(500).json(error);
   }*/

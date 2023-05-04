@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+require('dotenv').config(); // es por esto que no me hacia la conexion con la BD
 const Character = require('../api/models/characters.model');
 
 const arrayCharacters = [
@@ -157,30 +157,31 @@ const arrayCharacters = [
     ki: 5000,
   },
 ];
-
 mongoose
   .connect(process.env.DB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
   .then(async () => {
-    const { name, host } = db.connection;
-    console.log(`Base de datos : ${name} y host: ${host}`);
-
     const allCharacters = await Character.find();
-    console.log(allCharacters);
+    console.log('Todos los personajes' + allCharacters);
     if (allCharacters.length > 0) {
       await Character.collection.drop();
-      console.log('characteres borrados');
+      console.log('Characters borrados');
     }
   })
-  .catch((err) => console.log('error borrando characteres', err))
+  .catch((err) => {
+    console.log('error borrando los Characters', err);
+  })
   .then(async () => {
-    const charactersMap = arrayCharacters.map(
+    const CharactersMap = arrayCharacters.map(
       (character) => new Character(character)
     );
-    await Character.insertMany(charactersMap);
-    console.log('characteres insertados');
+    console.log(CharactersMap);
+    await Character.insertMany(CharactersMap);
+    console.log('Characters insertados');
   })
-  .catch((err) => console.log('error insertando characteres', err))
+  .catch((err) => {
+    console.log('error insertando los Characters', err);
+  })
   .finally(() => mongoose.disconnect());
